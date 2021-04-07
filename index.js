@@ -9,9 +9,11 @@ app.set('view engine', 'ejs');
 
 
 var items=[];
-var workItems=[];
+let workItems=[];
+// var workItems=[]; 
 
 var day="";
+
 
 app.get("/", function (request, response) {
   var today = new Date();
@@ -28,6 +30,7 @@ response.render("list", { listTitle:day , newListitems:items});
 
  
 });
+
 app.post("/",function(request,response){
 
     let item =request.body.newItem;
@@ -41,9 +44,10 @@ app.post("/",function(request,response){
   response.redirect("/");
     } 
 })
-
+// work 
 app.get("/Work",function(request,response){
-  response.render("list",{listTitle:"Work List", newListitems:workItems })
+  response.render("list",{listTitle:"work list",newListitems:workItems})
+  
 })
 // app.post("/work",function(request,response){
   
@@ -55,3 +59,11 @@ app.listen(process.env.PORT || 3000 , function () {
   console.log("code is running in  port");
 });
 // npm install dotenv 
+
+
+// npm init 
+// npm i express 
+// npm body-parser
+// npm ejs 
+// npm dotenv
+
