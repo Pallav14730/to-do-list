@@ -51,6 +51,7 @@ app.get("/Work",function(request,response){
 //   workItems.push(item);
 //   response.redirect("/work")
 // })
-app.listen(3000, function () {
-  console.log("server is running in 3000 port");
+app.listen(process.env.PORT || 3000 , function () {
+  console.log("code is running in  port");
 });
+// npm install dotenv 
